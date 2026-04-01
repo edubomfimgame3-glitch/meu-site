@@ -33,7 +33,19 @@
       color: white;
       text-align: center;
       overflow-x: hidden;
-    }
+    } 
+    <script>
+function openWhatsApp() {
+  const app = "whatsapp://send?phone=5521975058696&text=Quero%20comprar%20por%2019,99";
+  const web = "https://wa.me/5521975058696?text=Quero%20comprar%20por%2019,99";
+
+  window.location.href = app;
+
+  setTimeout(() => {
+    window.location.href = web;
+  }, 1200);
+}
+</script>
 
     .bg-glow {
       position: fixed;
@@ -485,9 +497,9 @@
     </div>
 
     <div class="cta-area">
-      <a class="btn btn-whatsapp" href="https://wa.me/5521975058696" target="_blank">
-        📲 Falar no WhatsApp
-      </a>
+   <a class="btn btn-whatsapp" href="#" onclick="openWhatsApp()">
+    📲 Falar no WhatsApp
+    </a>
 
       <a class="btn btn-pix" href="#">
         💳 Comprar via PIX
