@@ -499,9 +499,20 @@ function openWhatsApp() {
     📲 Falar no WhatsApp
    </a> 
    
+<button class="btn btn-pix" onclick="copiarPix()">
+  💳 Comprar via PIX - R$ 19,99
+</button>
 
-      <a class="btn btn-pix" href="#">
-        💳 Comprar via PIX
+<p id="pixMsg" style="display:none; color:#22c55e; font-weight:bold; margin-top:12px;">
+  Código PIX copiado. Cole no app do banco.
+</p>
+
+<script>
+function copiarPix() {
+  const codigoPix = 875545db-1a6a-457a-903b-79425bf1117d ;
+  navigator.clipboard.writeText(codigoPix).then(() => {
+    document.getElementById("pixMsg").style.display = "block";
+  })
       </a>
     </div>
 
